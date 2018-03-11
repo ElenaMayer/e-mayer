@@ -1,0 +1,16 @@
+<?php
+
+if(isset($_GET['en']))
+    $lang = 'en';
+else
+    $lang = 'ru';
+
+$domain = '';
+$phone = '';
+$email = '';
+$name_ru = '';
+$name_en = '';
+$link_vk = '';
+$link_fb = '';
+$link_ig = '';
+$google_api_key = '';
