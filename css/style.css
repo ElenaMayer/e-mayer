@@ -1525,6 +1525,26 @@ a.selected-item:before, .side-menu a:hover:before {
 /* End Loading page */
 
 
+/* Lang switcher*/
+
+.lang-switcher {
+	position: absolute;
+	right: 50px;
+	top: 25px;
+	z-index: 100;
+}
+.lang-switcher a {
+	color: #fff;
+	padding: 10px;
+}
+.lang-switcher span {
+	color: #c5c5c5;
+	padding: 10px;
+	font-weight: 700;
+}
+
+/* End Lang switcher*/
+
 /* ---------------------------------------
 			Start Media Query 
 ----------------------------------------- */

@@ -29,7 +29,7 @@
 		<!-- Bootstrap file -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- Custom styles css file -->
-		<link rel="stylesheet" href="css/style.css?2">
+		<link rel="stylesheet" href="css/style.css?4">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,6 +64,18 @@
 		</div>
 		<!-- End Header Section -->
 
+        <!-- Start Lang Switcher -->
+        <div class="lang-switcher">
+            <?php if($lang == 'en'):?>
+                <a href="/">Рус</a>
+                <span>Eng</span>
+            <?php else: ?>
+                <span>Рус</span>
+                <a href="/?en">Eng</a>
+            <?php endif?>
+        </div>
+        <!-- End Lang Switcher -->
+
 		<!-- Start Side Menu -->
 		<nav id="top-nav">
 			<div class="logo center"><a href="/"><?= $name_en ?></a></div> <!-- LOGO -->
@@ -75,11 +87,10 @@
 			<div class="side-menu" id="side-menu"> <!-- Menu items -->
 				<a href="#header"><?= $lang == 'ru' ? 'Главная' : 'Home' ?></a>
 				<a href="#about-me"><?= $lang == 'ru' ? 'Обо мне' : 'About me' ?></a>
-				<a href="#services"><?= $lang == 'ru' ? '!!!' : 'Services' ?></a>
+				<a href="#services"><?= $lang == 'ru' ? 'Чем я занимаюсь' : 'Services' ?></a>
 				<a href="#skills"><?= $lang == 'ru' ? 'Навыки' : 'Skills' ?></a>
 				<a href="#experiences">Опыт<?= $lang == 'ru' ? '' : 'Experiences' ?></a>
 				<a href="#portfolio"><?= $lang == 'ru' ? 'Портфолио' : 'Portfolio' ?></a>
-				<a href="#testmonials"><?= $lang == 'ru' ? '!!!' : 'Testmonials' ?></a>
 				<a href="#contact-me"><?= $lang == 'ru' ? 'Связаться со мной' : 'Contact Me' ?></a>
 			</div>
 		</nav>
@@ -98,8 +109,8 @@
 						<div class="heading-line"></div>
 						<p class="introduce"><?= $lang == 'ru' ? 'Талантливый Full-Stack Разработчик' : 'Talented Full-Stack Web Developer' ?></p>
 						<p class="intro"><?= $lang == 'ru' ?
-                                '!!!' :
-                                '!!!Enthusiastically reintermediate leveraged potentialities and wireless web services. Distinctively maintain ubiquitous best practices through market positioning materials. Progressively reintermediate ubiquitous channels via bricks-and-clicks technology. Distinctively formulate innovative relationships and high standards.'
+                                'Программирование - это моя профессия и хобби.' :
+                                'Programming is my profession and hobby.'
                             ?>
                         </p>
                     </div>
@@ -120,26 +131,26 @@
 							<div class="acc-item">
 								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Обо мне' : 'Who am i?' ?></div>
 								<div class="acc-content"><?= $lang == 'ru' ?
-                                        '!!!' :
-                                        '!!!Monotonectally iterate B2C solutions for interactive solutions. Uniquely synergize client-based channels vis-a-vis robust meta-services. Uniquely leverage other\'s multidisciplinary web-readiness after optimal.' ?></div>
+                                    '!!!Стремлюсь к самосовершенствованию и всегда довожу начатое дело до конца.' :
+                                    '!!!' ?></div>
 							</div>
 							<div class="acc-item">
-								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? '!!!' : 'What I\'m really good at?' ?></div>
+								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Чем я занимаюсь?' : 'What i\'m doing?' ?></div>
 								<div class="acc-content"><?= $lang == 'ru' ?
-                                        '!!!' :
-                                        '!!!Efficiently formulate cross-unit partnerships whereas an expanded array of infrastructures. Intrinsicly whiteboard extensible markets before just.' ?></div>
+                                    'Разработкой, созданием и поддержкой сервисов любой сложности. Разработкой архитектуры и UX/UI дизайном.' :
+                                    'Development and support of services of any complexity. Services architecture and UX / UI design.' ?></div>
 							</div>
-							<div class="acc-item">
-								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Как со мной связаться?' : 'How can you contact me?' ?></div>
-								<div class="acc-content"><?= $lang == 'ru' ?
-                                        '!!!' :
-                                        '!!!Proactively empower cutting-edge web services via virtual methodologies. Assertively foster cross-unit benefits via premier mindshare. Proactively target customized channels and team building catalysts.' ?></div>
-							</div>
+                            <div class="acc-item">
+                                <div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Что я могу Вам предложить?' : 'What I\'m really good at?' ?></div>
+                                <div class="acc-content"><?= $lang == 'ru' ?
+                                    'Создание интернет-магазина, сайта или сервиса с нуля; Улучшение и доработка существующего сайта/сервиса; Помощь в реализации сложных проектов.' :
+                                    'Creating an online store, website or service from scratch; Improvement of the existing website/service; Assistance in the implementation of complex projects.' ?></div>
+                            </div>
 							<div class="acc-item">
 								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Мои хобби' : 'What is my hobbies' ?></div>
 								<div class="acc-content"><?= $lang == 'ru' ?
-                                        '!!!' :
-                                        '!!!Compellingly evisculate standardized metrics with 2.0 value. Professionally impact magnetic technologies without.' ?></div>
+                                    'Создание красивых и удобных сервисов, фотография, путешествия, саморазвитие и самосовершенствование.' :
+                                    'Creation of beautiful and convenient services, photography, travel, self-development and self-improvement.' ?></div>
 							</div>
 						</div> <!-- End Accordion -->
 					</div>
@@ -198,8 +209,8 @@
 					<h2 class="h2"><?= $lang == 'ru' ? 'Чем я занимаюсь' : 'Here\'s what i\'m doing' ?></h2>
 					<div class="heading-line"></div>
 					<p class="main-para"><?= $lang == 'ru' ?
-                            '!!!' :
-                            '!!!Progressively reintermediate magnetic services vis-a-vis focused supply chains. Appropriately coordinate high-quality human capital without.' ?></p>
+                        'Full stack разработка, разработка архитектуры, UX/UI дизайн.' :
+                        '!!!Progressively reintermediate magnetic services vis-a-vis focused supply chains. Appropriately coordinate high-quality human capital without.' ?></p>
 				</div>	
 				<div class="row">
 					<!-- Service No. 1 -->
@@ -208,8 +219,8 @@
 							<i class="fa fa-css3"></i>
 							<h3><?= $lang == 'ru' ? 'Backend разработка' : 'Backend developing' ?></h3>
 							<p><?= $lang == 'ru' ?
-                                    '!!!' :
-                                    '!!!Simplify corporate e-services after diverse imperatives. Competently leverage existing excellent systems and seamless value.' ?></p>
+                                'Разработка серверной части приложения.' :
+                                '!!!' ?></p>
 						</div>
 					</div>
 					<!-- Service No. 2 -->
@@ -218,18 +229,18 @@
 							<i class="fa fa-code"></i>
 							<h3><?= $lang == 'ru' ? 'Frontend разработка' : 'Frontend developing' ?></h3>
 							<p><?= $lang == 'ru' ?
-                                    '!!!' :
-                                    '!!!Simplify corporate e-services after diverse imperatives. Competently leverage existing excellent systems and seamless value.' ?></p>
+                                'Верстка на клиентской стороне пользовательского интерфейса.' :
+                                '!!!' ?></p>
 						</div>
 					</div>
 					<!-- Service No. 3 -->
 					<div class="col-md-3 col-sm-6">
 						<div class="service">
 							<i class="fa fa-laptop"></i>
-							<h3><?= $lang == 'ru' ? '!!!' : '!!!' ?></h3>
+							<h3><?= $lang == 'ru' ? 'UX/UI дизайн' : 'UX/UI design' ?></h3>
 							<p><?= $lang == 'ru' ?
-                                    '!!!' :
-                                    '!!!' ?></p>
+                                'Разработка качественного пользовательского интерфейса.' :
+                                '!!!' ?></p>
 						</div>
 					</div>
 					<!-- Service No. 4 -->
@@ -238,8 +249,8 @@
 							<i class="fa fa-life-buoy"></i>
 							<h3><?= $lang == 'ru' ? 'Поддержка 24/7' : '24/7 support' ?></h3>
 							<p><?= $lang == 'ru' ?
-                                    '!!!' :
-                                    '!!!' ?></p>
+                                'Поддержка Вашего приложения в любое время дня и ночи.' :
+                                '!!!' ?></p>
 						</div>
 					</div>
 				</div>
@@ -253,11 +264,11 @@
 			<div class="container">
 				<!-- Title -->
 				<div class="title">
-					<h2 class="h2"><?= $lang == 'ru' ? '!!!технические навыки' : 'technical skills' ?></h2>
+					<h2 class="h2"><?= $lang == 'ru' ? 'технические навыки' : 'technical skills' ?></h2>
 					<div class="heading-line"></div>
 					<p class="title"><?= $lang == 'ru' ?
-                            '!!!' :
-                            '!!!Authoritatively foster bricks-and-clicks networks rather than superior architectures. Compellingly mesh frictionless imperatives vis-a-vis emerging.' ?></p>
+                            'Настройка web-серверов, работа с базами данных, работа с системами контроля версий и многое другое' :
+                            '!!!' ?></p>
 				</div>	
 				<!-- Start main skills -->
 				<div class="skills-wrapper row">
@@ -290,6 +301,37 @@
                         <h2>html5</h2>
                     </div>
 				</div> <!-- End main skills -->
+                <!-- Start main skills -->
+                <div class="skills-wrapper row">
+                    <!-- main skill No. 1 -->
+                    <div class="skill col-md-3 col-sm-6">
+                        <div class="chart center" data-percent="76">
+                            <span><span id="chart_num_5">0</span> %</span>
+                        </div>
+                        <h2>SQL</h2>
+                    </div>
+                    <!-- main skill No. 2 -->
+                    <div class="skill col-md-3 col-sm-6">
+                        <div class="chart center" data-percent="85">
+                            <span><span id="chart_num_6">0</span> %</span>
+                        </div>
+                        <h2>jquery</h2>
+                    </div>
+                    <!-- main skill No. 3 -->
+                    <div class="skill col-md-3 col-sm-6">
+                        <div class="chart center" data-percent="94">
+                            <span><span id="chart_num_7">0</span> %</span>
+                        </div>
+                        <h2>yii/yii2</h2>
+                    </div>
+                    <!-- main skill No. 4 -->
+                    <div class="skill col-md-3 col-sm-6">
+                        <div class="chart center" data-percent="83">
+                            <span><span id="chart_num_8">0</span> %</span>
+                        </div>
+                        <h2>svn/git</h2>
+                    </div>
+                </div> <!-- End main skills -->
 				<div class="other-skills">
 					<h2 class="h2"><?= $lang == 'ru' ? 'другие навыки' : 'other skills' ?></h2>
 					<div class="heading-line"></div>
@@ -304,31 +346,23 @@
 						</div>
 						<!-- Skill No. 2 -->
 						<div class='bar_group col-md-6 col-xs-12' data-max="100">
-							<div class=" bar_group__bar thick elastic" data-value="90" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'организованность' : 'organization' ?>" data-show-values="true" data-unit="%"></div>
+							<div class=" bar_group__bar thick elastic" data-value="92" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'организованность' : 'organization' ?>" data-show-values="true" data-unit="%"></div>
 						</div>
 						<!-- Skill No. 3 -->
 						<div class='bar_group col-md-6 col-xs-12' data-max="100">
-							<div class=" bar_group__bar thick elastic" data-value="75" data-tooltip="true" data-label="<?= $lang == 'ru' ? '!!!' : '!!!' ?>" data-show-values="true" data-unit="%"></div>
+							<div class=" bar_group__bar thick elastic" data-value="94" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'ответственность' : 'responsibility' ?>" data-show-values="true" data-unit="%"></div>
 						</div>
 						<!-- Skill No. 4 -->
 						<div class='bar_group col-md-6 col-xs-12' data-max="100">
-							<div class=" bar_group__bar thick elastic" data-value="85" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'программирование' : 'programming' ?>" data-show-values="true" data-unit="%"></div>
+							<div class=" bar_group__bar thick elastic" data-value="85" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'любознательность' : 'inquisitive' ?>" data-show-values="true" data-unit="%"></div>
 						</div>
 						<!-- Skill No. 5 -->
 						<div class='bar_group col-md-6 col-xs-12' data-max="100">
-							<div class=" bar_group__bar thick elastic" data-value="88" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'планирование' : 'planning' ?>" data-show-values="true" data-unit="%"></div>
+							<div class=" bar_group__bar thick elastic" data-value="90" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'планирование' : 'planning' ?>" data-show-values="true" data-unit="%"></div>
 						</div>
 						<!-- Skill No. 6 -->
 						<div class='bar_group col-md-6 col-xs-12' data-max="100">
-							<div class=" bar_group__bar thick elastic" data-value="80" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'обучаемость' : 'learning' ?>" data-show-values="true" data-unit="%"></div>
-						</div>
-						<!-- Skill No. 7 -->
-						<div class='bar_group col-md-6 col-xs-12' data-max="100">
-							<div class=" bar_group__bar thick elastic" data-value="55" data-tooltip="true" data-label="<?= $lang == 'ru' ? '!!!' : '!!!' ?>" data-show-values="true" data-unit="%"></div>
-						</div>
-						<!-- Skill No. 8 -->
-						<div class='bar_group col-md-6 col-xs-12' data-max="100">
-							<div class=" bar_group__bar thick elastic" data-value="73" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'UI/UX дизайн' : 'UI/UX design' ?>" data-show-values="true" data-unit="%"></div>
+							<div class=" bar_group__bar thick elastic" data-value="87" data-tooltip="true" data-label="<?= $lang == 'ru' ? 'обучаемость' : 'learning' ?>" data-show-values="true" data-unit="%"></div>
 						</div>
 					</div>	<!-- End other skills -->
 				</div>	
@@ -341,14 +375,26 @@
 			<div class="container">
 				<!-- Title -->
 				<div class="title wow fadeIn" data-wow-duration="0.5s" data-wow-offset="200">
-					<h2 class="h2"><?= $lang == 'ru' ? 'опыт работы' : 'work experiences' ?></h2>
+					<h2 class="h2"><?= $lang == 'ru' ? 'образование и опыт работы' : 'educations and work experiences' ?></h2>
 					<div class="heading-line"></div>
 					<p class="main-para"><?= $lang == 'ru' ?
-                            '!!!' :
-                            '!!!Professionally expedite orthogonal deliverables with emerging best practices. Uniquely leverage other\'s robust core competencies.' ?></p>
+                            'Два высших образования и больше 10 лет работы в IT-индустрии' :
+                            'Two higher educations and more than 10 years of work in the IT industry' ?></p>
 				</div>	
 				<!-- start timeline -->
 				<div class="timeline wow fadeIn" data-wow-duration="0.5s" data-wow-offset="200">
+                    <!-- Event No. 1 -->
+                    <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200">
+                        <div class="icon">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <div class="content right round-corners">
+                            <h3><?= $lang == 'ru' ? 'СибГУТИ' : 'SibSUTIS' ?></h3>
+                            <span class="duration">( 2003 - 2008 )</span>
+                            <span class="job-title"> <?= $lang == 'ru' ? 'Дипломированный специалист' : 'Specialist of' ?></span>
+                            <p><?= $lang == 'ru' ? 'По специальности "Средства связи с подвижными объектами"' : 'Means mobile communications' ?></p>
+                        </div>
+                    </div>
 					<!-- Event No. 1 -->
 					<div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200">
 						<div class="icon">
@@ -356,9 +402,9 @@
 						</div>
 						<div class="content left round-corners">
 							<h3><?= $lang == 'ru' ? 'СибГУТИ' : 'SibSUTIS' ?></h3>
-							<span class="duration"><?= $lang == 'ru' ? '( Сен. 2003 : Июнь 2008 )' : '( Sep. 2003 : June 2008 )' ?></span>
-							<span class="job-title"> <?= $lang == 'ru' ? '!!!' : '!!!' ?></span>
-							<p><?= $lang == 'ru' ? 'По специальности "Средства связи с подвижными объектами"' : '!!!' ?></p>
+							<span class="duration">( 2008 - 2011 )</span>
+							<span class="job-title"> <?= $lang == 'ru' ? 'Дипломированный специалист' : 'Specialist of' ?></span>
+							<p><?= $lang == 'ru' ? 'По специальности "Экономика и управление на предприятии"' : 'Economics and Enterprise Management' ?></p>
 						</div>
 					</div>
 					<!-- Event No. 2 -->
@@ -367,12 +413,12 @@
 							<i class="fa fa-briefcase"></i>
 						</div>
 						<div class="content right round-corners">
-							<h3>Novotelecom</h3>
-							<span class="duration"><?= $lang == 'ru' ? '!!!' : '!!!( Aug. 2008 : Mar. 2010 )' ?></span>
-							<span class="job-title"> <?= $lang == 'ru' ? '!!!' : '!!!' ?></span>
+							<h3>Novotelecom </h3>
+							<span class="duration">( 2008 - 2012 )</span>
+							<span class="job-title"> <?= $lang == 'ru' ? 'Программист' : 'Web-programmer' ?></span>
 							<p><?= $lang == 'ru' ?
-                                    '!!!' :
-                                    '!!!Credibly architect visionary benefits vis-a-vis functional e-business. Uniquely cultivate client-based process improvements via diverse models. Objectively orchestrate alternative expertise.' ?></p>
+                                'Разработка внутренних сервисов (ЦРМ, интернет-портал); Кросс-системная интеграция и архитектурные задачи; Разработка корпоративного портала и промо-сайтов.' :
+                                'Development of internal services (CRM, Internet portal); Cross-system integration and architectural tasks; Development of a corporate portal and promo sites.' ?></p>
 						</div>
 					</div>
 					<!-- Event No. 3 -->
@@ -382,11 +428,11 @@
 						</div>
 						<div class="content left round-corners">
 							<h3>2GIS</h3>
-							<span class="duration"><?= $lang == 'ru' ? '!!!' : '!!!( May 2010 : Sep. 2013 )' ?></span>
-							<span class="job-title"> <?= $lang == 'ru' ? '!!!' : '!!!' ?></span>
+							<span class="duration">( 2012 - 2018 )</span>
+							<span class="job-title"> <?= $lang == 'ru' ? 'Web-разработчик' : 'Web-programmer' ?></span>
 							<p><?= $lang == 'ru' ?
-                                    '!!!' :
-                                    '!!!Credibly architect visionary benefits vis-a-vis functional e-business. Uniquely cultivate client-based process improvements via diverse models. Objectively orchestrate alternative expertise.' ?></p>
+                                'Разработка внутренних и внешних сервисов (корпоративный портал, интернет-портал, сервис перевода и другое); Интеграция с другими сервисами компании; Разработка масштабируемой и отказоустойчивой архитектуры' :
+                                'Development of internal and external services (corporate portal, internet portal, translation service, etc.); Integration with other services of the company.; Development of scalable and fail-safety architecture' ?></p>
 						</div>
 					</div>
 					<!-- Event No. 4 -->
@@ -396,11 +442,11 @@
 						</div>
 						<div class="content right round-corners">
 							<h3>RebelMouse</h3>
-							<span class="duration"><?= $lang == 'ru' ? '!!!' : '!!!( 2014 : NOW )' ?></span>
-							<span class="job-title"> <?= $lang == 'ru' ? '!!!' : '!!!' ?></span>
+							<span class="duration">( 2015 - 2015 )</span>
+							<span class="job-title"> <?= $lang == 'ru' ? 'Frontend-разработчик' : 'Frontend-programmer' ?></span>
 							<p><?= $lang == 'ru' ?
-                                    '!!!' :
-                                    '!!!Monotonectally benchmark ubiquitous relationships rather than professional convergence. Assertively mesh cross-media metrics rather than adaptive platforms. Distinctively communicate superior.' ?></p>
+                                'Разработка, усовершенствование и оптимизация UX / UI; Оптимизация под мобильные устройства.' :
+                                'Development, improvement and optimization of UX / UI; Project optimization for mobile device interaction with the backend.' ?></p>
 						</div>
 					</div>
 				</div> <!-- End Timeline -->
@@ -429,19 +475,18 @@
 					<h2 class="h2"><?= $lang == 'ru' ? 'Мое портфолио' : 'My awesome portfolio' ?></h2>
 					<div class="heading-line"></div>
 					<p class="main-para"><?= $lang == 'ru' ?
-                            '' :
-                            'Collaboratively fabricate alternative quality vectors through multimedia based web services. Conveniently procrastinate cost effective.' ?></p>
+                        '' :
+                        'Collaboratively fabricate alternative quality vectors through multimedia based web services. Conveniently procrastinate cost effective.' ?></p>
 				</div>	
 				<!-- Mixitup controls -->
 				<div class="controls center">  
-					<button class="filter round-corners" data-filter="all" data-content="All">All</button>
-					<button class="filter round-corners" data-filter=".photos" data-content="PHOTOS">PHOTOS</button>
-					<button class="filter round-corners" data-filter=".branding" data-content="BRANDING">BRANDING</button>
-					<button class="filter round-corners" data-filter=".illustration" data-content="ILLUSTRATION">ILLUSTRATION</button>
+					<button class="filter round-corners" data-filter="all" data-content="<?= $lang == 'ru' ? 'ВСЕ' : 'ALL' ?>"><?= $lang == 'ru' ? 'Все' : 'All' ?></button>
+					<button class="filter round-corners" data-filter=".store" data-content="<?= $lang == 'ru' ? 'Интернет-магазин' : 'Online store' ?>"><?= $lang == 'ru' ? 'Интернет-магазин' : 'Online store' ?></button>
+					<button class="filter round-corners" data-filter=".website" data-content="<?= $lang == 'ru' ? 'САЙТ' : 'WEBSITE' ?>"><?= $lang == 'ru' ? 'Сайт' : 'Website' ?></button>
 				</div>	
 				<div id="Container">
 					<!-- Project No. 1 -->
-					<div class="mix branding col-md-3 col-sm-6 col-xs-6" data-my-order="1">
+					<div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="1">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 1">
@@ -459,7 +504,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_1">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( branding )</p>
+										<p class="cat">( store )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -473,7 +518,7 @@
 					</div>
 
 					<!-- Project No. 2 -->
-					<div class="mix photos col-md-3 col-sm-6 col-xs-6" data-my-order="2">
+					<div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="2">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 2">
@@ -491,7 +536,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_2">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( photos )</p>
+										<p class="cat">( store )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -505,7 +550,7 @@
 					</div>
 
 					<!-- Project No. 3 -->
-					<div class="mix illustration col-md-3 col-sm-6 col-xs-6" data-my-order="3">
+					<div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="3">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 3">
@@ -523,7 +568,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_3">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( illustration )</p>
+										<p class="cat">( store )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -537,7 +582,7 @@
 					</div>
 
 					<!-- Project No. 4 -->
-					<div class="mix photos col-md-3 col-sm-6 col-xs-6" data-my-order="4">
+					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="4">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 4">
@@ -555,7 +600,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_4">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( photos )</p>
+										<p class="cat">( website )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -569,7 +614,7 @@
 					</div>
 
 					<!-- Project No. 5 -->
-					<div class="mix branding col-md-3 col-sm-6 col-xs-6" data-my-order="5">
+					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="5">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 5">
@@ -587,7 +632,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_5">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( branding )</p>
+										<p class="cat">( website )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -601,7 +646,7 @@
 					</div>
 
 					<!-- Project No. 6 -->
-					<div class="mix illustration col-md-3 col-sm-6 col-xs-6" data-my-order="6">
+					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="6">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 6">
@@ -619,7 +664,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_6">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( illustration )</p>
+										<p class="cat">( website )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -633,7 +678,7 @@
 					</div>
 
 					<!-- Project No. 7 -->
-					<div class="mix photos col-md-3 col-sm-6 col-xs-6" data-my-order="7">
+					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="7">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 7">
@@ -651,7 +696,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_7">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( photos )</p>
+										<p class="cat">( website )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -665,7 +710,7 @@
 					</div>
 
 					<!-- Project No. 8 -->
-					<div class="mix illustration col-md-3 col-sm-6 col-xs-6" data-my-order="8">
+					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="8">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
 							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 8">
@@ -683,7 +728,7 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h3 class="modal-title" id="label_8">Project Name</h3>
 										<div class="heading-line"></div>
-										<p class="cat">( illustration )</p>
+										<p class="cat">( website )</p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
@@ -700,101 +745,6 @@
 		</div>
 		<!-- End Portfolio Section -->
 
-		<!-- Start Testmonials Section -->
-		<div class="testmonials center" id="testmonials">
-			<div class="overlay"></div>
-			<div class="pattern"></div>
-			<div class="container">
-				<div class="test-owl">
-					<!-- Clinent No.1 -->
-					<div class="client text-center">
-						<h3>- Kenny John -</h3>
-						<p>UI designer</p>
-						<div class="stars">
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star-half"></span>
-						</div>
-						<div class="opinion">
-							<i class="fa fa-quote-left"></i>
-							<p>Professionally expedite clicks-and-mortar methods of empowerment through excellent convergence. Efficiently strategize user friendly e-commerce before technically sound interfaces. Professionally harness one-to-one outsourcing whereas future-proof.</p>
-							<i class="fa fa-quote-right reversed"></i>
-						</div>
-					</div>
-					<!-- Clinent No.2 -->
-					<div class="client text-center">
-						<h3>- Will hans -</h3>
-						<p>Ux designer</p>
-						<div class="stars">
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star-half"></span>
-						</div>
-						<div class="opinion">
-							<i class="fa fa-quote-left"></i>
-							<p>Assertively innovate technically sound process improvements with best-of-breed users. Seamlessly matrix dynamic processes rather than multimedia based scenarios. Seamlessly myocardinate front-end e-commerce vis-a-vis state of the art core competencies. Energistically create intermandated models.</p>
-							<i class="fa fa-quote-right reversed"></i>
-						</div>
-					</div>
-					<!-- Clinent No.3 -->
-					<div class="client text-center">
-						<h3>- william hannah -</h3>
-						<p>visual designer</p>
-						<div class="stars">
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-						</div>
-						<div class="opinion">
-							<i class="fa fa-quote-left"></i>
-							<p>Globally integrate resource maximizing information through economically sound results. Enthusiastically generate functionalized applications rather than quality imperatives. Monotonectally deploy integrated products.</p>
-							<i class="fa fa-quote-right reversed"></i>
-						</div>
-					</div>
-					<!-- Clinent No.4 -->
-					<div class="client text-center">
-						<h3>- Adams kidman -</h3>
-						<p>web developer</p>
-						<div class="stars">
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-						</div>
-						<div class="opinion">
-							<i class="fa fa-quote-left"></i>
-							<p>Compellingly evolve future-proof total linkage via team driven information. Authoritatively maximize B2C paradigms rather than diverse channels. Dynamically pontificate B2C solutions whereas enterprise human capital. Interactively incentivize client-focused e-services.</p>
-							<i class="fa fa-quote-right reversed"></i>
-						</div>
-					</div>
-					<!-- Clinent No.5 -->
-					<div class="client text-center">
-						<h3>- Jessie J -</h3>
-						<p>ui / ux designer</p>
-						<div class="stars">
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-						</div>
-						<div class="opinion">
-							<i class="fa fa-quote-left"></i>
-							<p>Credibly aggregate low-risk high-yield opportunities after e-business expertise. Distinctively brand front-end sources with bricks-and-clicks supply chains. Rapidiously engineer ubiquitous e-commerce rather than virtual process.</p>
-							<i class="fa fa-quote-right reversed"></i>
-						</div>
-					</div>					
-				</div>
-			</div>
-		</div>
-		<!-- End Testmonials Section -->
-
 		<!-- Start Contact Section -->
 		<div class="contact center" id="contact-me">
 			<div class="container">
@@ -803,8 +753,8 @@
 					<h2 class="h2"><?= $lang == 'ru' ? 'Связаться со мной' : 'Get in touch' ?></h2>
 					<div class="heading-line"></div>
 					<p class="main-para"><?= $lang == 'ru' ?
-                            '' :
-                            'Globally empower viral services whereas mission-critical platforms. Rapidiously optimize scalable paradigms before covalent technologies.' ?></p>
+                        '!!!' :
+                        '!!!' ?></p>
 				</div>
 				<div class="row form-wrapper">
 					<div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
@@ -916,7 +866,6 @@
 				</div>	
 			</div>
 		</div>
-
 		<!-- End Footer Section -->			
 
 		<!-- Start To Top button -->
@@ -928,8 +877,6 @@
 		<!-- Start scroll percentage -->
 		<div id="scroll"></div>
 		<!-- End scroll percentage -->		
-		
-
 
 		<!-- Including jQuery file -->
 		<script src="js/jquery-1.12.1.min.js"></script>
@@ -956,7 +903,7 @@
 		<!-- Google Map -->		
 		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?= $google_api_key ?>"></script>
 		<!-- Custom file  -->
-		<script src="js/plugins.js?2"></script>
+		<script src="js/plugins.js?3"></script>
 		<!-- Wow.js file -->
 		<script src="js/wow.min.js"></script>
 		<script>
