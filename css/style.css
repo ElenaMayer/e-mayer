@@ -817,7 +817,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 .quote {
 	padding: 80px 0;
-	background: #333 url('http://placehold.it/1920x1280') no-repeat fixed center;
+	background: #333 url('/img/bg/qoute.jpg') no-repeat fixed center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-ms-background-size: cover;

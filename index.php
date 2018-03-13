@@ -29,7 +29,7 @@
 		<!-- Bootstrap file -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- Custom styles css file -->
-		<link rel="stylesheet" href="css/style.css?4">
+		<link rel="stylesheet" href="css/style.css?5">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -78,7 +78,7 @@
 
 		<!-- Start Side Menu -->
 		<nav id="top-nav">
-			<div class="logo center"><a href="/"><?= $name_en ?></a></div> <!-- LOGO -->
+			<div class="logo center"><a href="/<?= $lang == 'en'? '?en' : '' ?>"><?= $domain ?></a></div> <!-- LOGO -->
 			<div class="menu" id="menu">
 				<span class="bar b1"></span>
 				<span class="bar b2"></span>
@@ -102,7 +102,7 @@
 				<div class="row">
 					<!-- Profile Pic -->
 					<div class="my-pic center col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
-						<img src="http://placehold.it/200x200" alt="my profile">
+						<img src="/img/my-face.png" alt="my profile">
 					</div>
 					<div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
 						<h2 class="h2"><?= $lang == 'ru' ? $name_ru : $name_en ?></h2>
@@ -131,8 +131,8 @@
 							<div class="acc-item">
 								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Обо мне' : 'Who am i?' ?></div>
 								<div class="acc-content"><?= $lang == 'ru' ?
-                                    '!!!Стремлюсь к самосовершенствованию и всегда довожу начатое дело до конца.' :
-                                    '!!!' ?></div>
+                                    'Я свободный программист из Сибири. Я люблю свою работу и ее результаты.' :
+                                    'I\'m a free programmer from Siberia. I love my work and its results.' ?></div>
 							</div>
 							<div class="acc-item">
 								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Чем я занимаюсь?' : 'What i\'m doing?' ?></div>
@@ -210,7 +210,7 @@
 					<div class="heading-line"></div>
 					<p class="main-para"><?= $lang == 'ru' ?
                         'Full stack разработка, разработка архитектуры, UX/UI дизайн.' :
-                        '!!!Progressively reintermediate magnetic services vis-a-vis focused supply chains. Appropriately coordinate high-quality human capital without.' ?></p>
+                        'Full stack programming, architecture development, UX / UI design.' ?></p>
 				</div>	
 				<div class="row">
 					<!-- Service No. 1 -->
@@ -220,7 +220,7 @@
 							<h3><?= $lang == 'ru' ? 'Backend разработка' : 'Backend developing' ?></h3>
 							<p><?= $lang == 'ru' ?
                                 'Разработка серверной части приложения.' :
-                                '!!!' ?></p>
+                                'Development of the server part of the application.' ?></p>
 						</div>
 					</div>
 					<!-- Service No. 2 -->
@@ -230,7 +230,7 @@
 							<h3><?= $lang == 'ru' ? 'Frontend разработка' : 'Frontend developing' ?></h3>
 							<p><?= $lang == 'ru' ?
                                 'Верстка на клиентской стороне пользовательского интерфейса.' :
-                                '!!!' ?></p>
+                                'Programming on the client side of the user interface.' ?></p>
 						</div>
 					</div>
 					<!-- Service No. 3 -->
@@ -240,7 +240,7 @@
 							<h3><?= $lang == 'ru' ? 'UX/UI дизайн' : 'UX/UI design' ?></h3>
 							<p><?= $lang == 'ru' ?
                                 'Разработка качественного пользовательского интерфейса.' :
-                                '!!!' ?></p>
+                                'Development of a high-quality user interface.' ?></p>
 						</div>
 					</div>
 					<!-- Service No. 4 -->
@@ -250,7 +250,7 @@
 							<h3><?= $lang == 'ru' ? 'Поддержка 24/7' : '24/7 support' ?></h3>
 							<p><?= $lang == 'ru' ?
                                 'Поддержка Вашего приложения в любое время дня и ночи.' :
-                                '!!!' ?></p>
+                                'Support your application at any time of day or night.' ?></p>
 						</div>
 					</div>
 				</div>
@@ -267,8 +267,8 @@
 					<h2 class="h2"><?= $lang == 'ru' ? 'технические навыки' : 'technical skills' ?></h2>
 					<div class="heading-line"></div>
 					<p class="title"><?= $lang == 'ru' ?
-                            'Настройка web-серверов, работа с базами данных, работа с системами контроля версий и многое другое' :
-                            '!!!' ?></p>
+                            'Настройка web-серверов, работа с базами данных, работа с системами контроля версий и многое другое.' :
+                            'Configuring web servers, working with databases, working with version control systems and much more.' ?></p>
 				</div>	
 				<!-- Start main skills -->
 				<div class="skills-wrapper row">
@@ -459,9 +459,11 @@
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="qoute-wrapper">
-					<p class="words"><span class="quote-mark open">"</span><?= $lang == 'ru' ? '!!!' : '!!!Even if you are on the right track, you will get run over if you just set there.' ?>
+					<p class="words"><span class="quote-mark open">"</span><?= $lang == 'ru' ?
+                            'Для того, чтобы жить свободно и счастливо, вы должны пожертвовать скукой. Это не всегда легкая жертва' :
+                            'You are never given a wish without also being given the power to make it come true. You may have to work for it, however.' ?>
                         <span class="quote-mark end">"</span></p>
-					<p class="author">- <?= $lang == 'ru' ? '!!!' : '!!!Will Rogers' ?> -</p>
+					<p class="author">- <?= $lang == 'ru' ? 'Ричард Бах' : 'Richard Bach' ?> -</p>
 				</div>
 			</div>
 		</div>
@@ -489,9 +491,9 @@
 					<div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="1">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 1">
+							<img src="/img/p1.png" class="center-block img-responsive" alt="<?= $p1 ?>">
 							<div class="overlay-content">
-								<span>project name</span>
+                                <span><?= $p1 ?></span>
 								<i class="fa fa-search" data-toggle="modal" data-target="#modal-1"></i>
 							</div>
 					    </div>
@@ -502,15 +504,17 @@
 									<!-- Modal Header -->
 									<div class="modal-header center">
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_1">Project Name</h3>
+										<h3 class="modal-title" id="label_1"><a href="http://<?= $p1 ?>" target="_blank"><?= $p1 ?></a></h3>
 										<div class="heading-line"></div>
-										<p class="cat">( store )</p>
+										<p class="cat"><?= $lang == 'ru' ? 'Интернет-магазин одежды в восточном стиле' : 'Online store of clothes in east style' ?></p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
 										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-1">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
+										<img class="center-block img-responsive" src="/img/p1.png" alt="<?= $p1 ?>">
+										<p><?= $lang == 'ru' ?
+                                            'Интернет-магазин с возможностью авторизации, добавления в корзину, оформления, отправки, оплаты и отслеживания заказов. В личном кабинете есть возможность редактирования личных данных и просмотра истории заказов.' :
+                                            'Online store with authorization, ability to add to the cart, ordering, payment and track orders.' ?></p>
 									</div>
 								</div>
 							</div>
@@ -518,12 +522,12 @@
 					</div>
 
 					<!-- Project No. 2 -->
-					<div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="2">
+					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="2">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 2">
+							<img src="/img/p2.png" class="center-block img-responsive" alt="<?= $p2 ?>">
 							<div class="overlay-content">
-								<span>project name</span>
+								<span><?= $p2 ?></span>
 								<i class="fa fa-search" data-toggle="modal" data-target="#modal-2"></i>
 							</div>
 					    </div>
@@ -534,15 +538,17 @@
 									<!-- Modal Header -->
 									<div class="modal-header center">
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_2">Project Name</h3>
+										<h3 class="modal-title" id="label_2"><a href="http://<?= $p2 ?>" target="_blank"><?= $p2 ?></a></h3>
 										<div class="heading-line"></div>
-										<p class="cat">( store )</p>
+										<p class="cat"><?= $lang == 'ru' ? 'Развлекательный портал для детей' : 'Entertaining portal for children' ?></p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
 										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-2">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
+										<img class="center-block img-responsive" src="/img/p2.png" alt="<?= $p2 ?>">
+										<p><?= $lang == 'ru' ?
+                                            'Развлекательный портал в формате блога с возможностью авторизации, добавления статей и видео.' :
+                                            'Entertaining portal in the blog format with authorization, ability to add articles and videos.' ?></p>
 									</div>
 								</div>
 							</div>
@@ -553,9 +559,9 @@
 					<div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="3">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 3">
+							<img src="/img/p3.png" class="center-block img-responsive" alt="<?= $p3 ?>">
 							<div class="overlay-content">
-								<span>project name</span>
+								<span><?= $p3 ?></span>
 								<i class="fa fa-search" data-toggle="modal" data-target="#modal-3"></i>
 							</div>
 					    </div>
@@ -566,15 +572,17 @@
 									<!-- Modal Header -->
 									<div class="modal-header center">
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_3">Project Name</h3>
+										<h3 class="modal-title" id="label_3"><a href="http://<?= $p3 ?>" target="_blank"><?= $p3 ?></a></h3>
 										<div class="heading-line"></div>
-										<p class="cat">( store )</p>
+										<p class="cat"><?= $lang == 'ru' ? 'Интернет-магазин вязанной одежды' : 'Online store of knitted clothes' ?></p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
 										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-3">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
+										<img class="center-block img-responsive" src="/img/p3.png" alt="<?= $p3 ?>">
+										<p><?= $lang == 'ru' ?
+                                            'Интернет-магазин с возможностью авторизации, добавления в корзину, оформления, отправки заказов. Администрирование каталога и отслеживание заказов через админку.' :
+                                            'Online store with authorize, the ability to add to the cart and ordering. ' ?></p>
 									</div>
 								</div>
 							</div>
@@ -585,9 +593,9 @@
 					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="4">
 						<div class="img-wrapper overlay-slide-right center">
 							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 4">
+							<img src="/img/p4.png" class="center-block img-responsive" alt="<?= $p4 ?>">
 							<div class="overlay-content">
-								<span>project name</span>
+								<span><?= $p4 ?></span>
 								<i class="fa fa-search" data-toggle="modal" data-target="#modal-4"></i>
 							</div>
 					    </div>
@@ -598,143 +606,17 @@
 									<!-- Modal Header -->
 									<div class="modal-header center">
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_4">Project Name</h3>
+										<h3 class="modal-title" id="label_4"><a href="http://<?= $p4 ?>" target="_blank"><?= $p4 ?></a></h3>
 										<div class="heading-line"></div>
-										<p class="cat">( website )</p>
+										<p class="cat"><?= $lang == 'ru' ? 'Информационный портал по шопингу' : 'Information portal for shopping' ?></p>
 									</div>
 									<!-- Modal Body -->
 									<div class="modal-body">
 										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-4">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
-									</div>
-								</div>
-							</div>
-						</div>  <!-- End Modal -->
-					</div>
-
-					<!-- Project No. 5 -->
-					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="5">
-						<div class="img-wrapper overlay-slide-right center">
-							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 5">
-							<div class="overlay-content">
-								<span>project name</span>
-								<i class="fa fa-search" data-toggle="modal" data-target="#modal-5"></i>
-							</div>
-					    </div>
-					    <!-- Modal -->
-						<div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="label_5">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<!-- Modal Header -->
-									<div class="modal-header center">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_5">Project Name</h3>
-										<div class="heading-line"></div>
-										<p class="cat">( website )</p>
-									</div>
-									<!-- Modal Body -->
-									<div class="modal-body">
-										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-5">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
-									</div>
-								</div>
-							</div>
-						</div>  <!-- End Modal -->
-					</div>
-
-					<!-- Project No. 6 -->
-					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="6">
-						<div class="img-wrapper overlay-slide-right center">
-							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 6">
-							<div class="overlay-content">
-								<span>project name</span>
-								<i class="fa fa-search" data-toggle="modal" data-target="#modal-6"></i>
-							</div>
-					    </div>
-					    <!-- Modal -->
-						<div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="label_6">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<!-- Modal Header -->
-									<div class="modal-header center">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_6">Project Name</h3>
-										<div class="heading-line"></div>
-										<p class="cat">( website )</p>
-									</div>
-									<!-- Modal Body -->
-									<div class="modal-body">
-										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-6">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
-									</div>
-								</div>
-							</div>
-						</div>  <!-- End Modal -->
-					</div>
-
-					<!-- Project No. 7 -->
-					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="7">
-						<div class="img-wrapper overlay-slide-right center">
-							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 7">
-							<div class="overlay-content">
-								<span>project name</span>
-								<i class="fa fa-search" data-toggle="modal" data-target="#modal-7"></i>
-							</div>
-					    </div>
-					    <!-- Modal -->
-						<div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="label_7">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<!-- Modal Header -->
-									<div class="modal-header center">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_7">Project Name</h3>
-										<div class="heading-line"></div>
-										<p class="cat">( website )</p>
-									</div>
-									<!-- Modal Body -->
-									<div class="modal-body">
-										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-7">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
-									</div>
-								</div>
-							</div>
-						</div>  <!-- End Modal -->
-					</div>
-
-					<!-- Project No. 8 -->
-					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="8">
-						<div class="img-wrapper overlay-slide-right center">
-							<!-- Project Image -->
-							<img src="http://placehold.it/640x420" class="center-block img-responsive" alt="project 8">
-							<div class="overlay-content">
-								<span>project name</span>
-								<i class="fa fa-search" data-toggle="modal" data-target="#modal-8"></i>
-							</div>
-					    </div>
-					    <!-- Modal -->
-						<div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-labelledby="label_8">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<!-- Modal Header -->
-									<div class="modal-header center">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h3 class="modal-title" id="label_8">Project Name</h3>
-										<div class="heading-line"></div>
-										<p class="cat">( website )</p>
-									</div>
-									<!-- Modal Body -->
-									<div class="modal-body">
-										<!-- Project Image In Modal -->
-										<img class="center-block img-responsive" src="http://placehold.it/640x420" alt="project-8">
-										<p>Energistically develop reliable content for leading-edge networks. Dramatically enhance optimal testing procedures and multimedia based e-commerce. Holisticly syndicate standardized human capital without extensible experiences. <br> Efficiently synthesize client-based solutions through resource sucking systems. Proactively visualize mission-critical paradigms before competitive value. Efficiently disintermediate resource sucking e-markets via visionary e-markets.</p>
+										<img class="center-block img-responsive" src="/img/p4.png" alt="<?= $p4 ?>">
+										<p><?= $lang == 'ru' ?
+                                            'Информационный портал в формате блога с возможностью авторизации, добавления статей и комментариев.' :
+                                            'Information portal in the blog format with authorization, ability to add articles and comments.' ?></p>
 									</div>
 								</div>
 							</div>
@@ -753,8 +635,8 @@
 					<h2 class="h2"><?= $lang == 'ru' ? 'Связаться со мной' : 'Get in touch' ?></h2>
 					<div class="heading-line"></div>
 					<p class="main-para"><?= $lang == 'ru' ?
-                        '!!!' :
-                        '!!!' ?></p>
+                        'Вы можете написать мне в социальных сетях, на email или оставить сообщение в этой форме.' :
+                        'You can contact me on social networks, email or leave a message in this form.' ?></p>
 				</div>
 				<div class="row form-wrapper">
 					<div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
@@ -823,13 +705,13 @@
 		<div class="partners">
 			<div class="container">
 				<div class="partners-owl-carousel">
-					<div class="partner"><img src="http://placehold.it/365x110" alt="partner"></div>
-					<div class="partner"><img src="http://placehold.it/365x110" alt="partner"></div>
-					<div class="partner"><img src="http://placehold.it/365x110" alt="partner"></div>
-					<div class="partner"><img src="http://placehold.it/365x110" alt="partner"></div>
-					<div class="partner"><img src="http://placehold.it/365x110" alt="partner"></div>
-					<div class="partner"><img src="http://placehold.it/365x110" alt="partner"></div>
-					<div class="partner"><img src="http://placehold.it/365x110" alt="partner"></div>
+					<div class="partner"><img src="/img/es.png" alt="<?= $p1 ?>"></div>
+					<div class="partner"><img src="/img/eg.png" alt="Novotelecom"></div>
+					<div class="partner"><img src="/img/sw.png" alt="<?= $p3 ?>"></div>
+					<div class="partner"><img src="/img/rs.png" alt="<?= $p4 ?>"></div>
+					<div class="partner"><img src="/img/2g.png" alt="2Gis"></div>
+					<div class="partner"><img src="/img/pp.png" alt="<?= $p2 ?>"></div>
+<!--                    <div class="partner"><img src="/img/rm.png" alt="partner"></div>-->
 				</div>
 			</div>
 		</div>		
