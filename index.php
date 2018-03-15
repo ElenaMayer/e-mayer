@@ -1,4 +1,4 @@
-<?php include 'config.php'; ?>
+<?php include 'php/config.php'; ?>
 
 <!DOCTYPE html>
 <html lang="<?=$lang?>">
@@ -37,6 +37,7 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+        <?php include 'php/metrika.php'; ?>
 	</head>
 	<body>	
 		<!-- Start Preloader Page --> 
@@ -102,7 +103,7 @@
 				<div class="row">
 					<!-- Profile Pic -->
 					<div class="my-pic center col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
-						<img src="/img/my-face.png" alt="my profile">
+						<img src="/img/my-face.jpg" alt="my profile">
 					</div>
 					<div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
 						<h2 class="h2"><?= $lang == 'ru' ? $name_ru : $name_en ?></h2>
@@ -131,7 +132,7 @@
 							<div class="acc-item">
 								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Обо мне' : 'Who am i?' ?></div>
 								<div class="acc-content"><?= $lang == 'ru' ?
-                                    'Я свободный программист из Сибири. Я люблю свою работу и ее результаты.' :
+                                    'Я свободный программист из Сибири. Люблю свою работу и ее результаты.' :
                                     'I\'m a free programmer from Siberia. I love my work and its results.' ?></div>
 							</div>
 							<div class="acc-item">
@@ -785,7 +786,7 @@
 		<!-- Google Map -->		
 		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?= $google_api_key ?>"></script>
 		<!-- Custom file  -->
-		<script src="js/plugins.js?3"></script>
+		<script src="js/plugins.js?4"></script>
 		<!-- Wow.js file -->
 		<script src="js/wow.min.js"></script>
 		<script>
