@@ -1,15 +1,15 @@
 <?php
 
-include 'php/config.php';
+include 'config.php';
 
 $errorMsg = "";
 
 // NAME
 if (empty($_POST["name"])) {
     if($lang == 'ru')
-        $errorMSG = "Заполните Имя! ";
+        $errorMSG = "Заполните Имя ";
     else
-        $errorMSG = "Name is required! ";
+        $errorMSG = "Name is required ";
 } else {
     $name = $_POST["name"];
 }
@@ -27,14 +27,14 @@ if (empty($_POST["mail"])) {
 // MESSAGE
 if (empty($_POST["message"])) {
     if($lang == 'ru')
-        $errorMSG = "Заполите сообщение ";
+        $errorMSG = "Заполните сообщение ";
     else
         $errorMSG .= "Message is required ";
 } else {
     $message = nl2br($_POST['message']);
 }
 
-$Subject = "Сообщение с e-mayer.ru";
+$Subject = "Сообщение с ".$domain;
 
 // prepare email body text
 $Body = '<b>Имя:</b> '.$name.' <br><b>E-mail</b> '.$mail.' <p>' .$message.'</p>';
@@ -46,11 +46,14 @@ $headers .= 'From: ' . $mail . "\r\n";
 $success = mail($email, $Subject, $Body, $headers);
 
 // redirect to success page
-if ($success && $errorMSG == ""){
+if ($success && !isset($errorMSG)){
    echo "success";
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
+        if($lang == 'ru')
+            echo "Что-то пошло не так :(";
+        else
+            echo "Something went wrong :(";
     } else {
         echo $errorMSG;
     }

@@ -276,7 +276,7 @@ URL: https://themeforest.net/user/ahmedbeheiry
 	var contactForm = $("#contact-form"),
 		submitBtn = $(".submit-btn"),
 		formResponse = $(".form-response");
-	contactForm.validator().on("submit", function (e) {
+		contactForm.validator().on("submit", function (e) {
 			if(e.isDefaultPrevented()) {
 				if($('html').attr('lang') == 'ru')
 					var msg = 'Пожалуйста, заполните форму.';

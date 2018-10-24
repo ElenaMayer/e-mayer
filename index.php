@@ -29,7 +29,7 @@
 		<!-- Bootstrap file -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- Custom styles css file -->
-		<link rel="stylesheet" href="css/style.css?5">
+		<link rel="stylesheet" href="css/style.css?6">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -122,8 +122,8 @@
 						<div class="heading-line"></div>
 						<div class="personal-wrapper">
 							<span><strong><?= $lang == 'ru' ? 'имя:' : 'name:' ?> </strong><?= $lang == 'ru' ? $name_ru : $name_en ?></span>
-							<span><strong>E-mail: </strong><a href="<?= $email ?>"><?= $email ?></a></span>
-							<span><strong><?= $lang == 'ru' ? 'номер телефона:' : 'phone number:' ?> </strong><?= $phone ?></span>
+							<span><strong>E-mail: </strong><a href="mailto:<?= $email ?>"><?= $email ?></a></span>
+                            <?php if(false):?><span><strong><?= $lang == 'ru' ? 'номер телефона:' : 'phone number:' ?> </strong><a href="tel:<?= $phone ?>"><?= $phone ?></a></span><?php endif;?>
 						</div>
 					</div>
 					<div class="why-me col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
@@ -429,7 +429,7 @@
 						</div>
 						<div class="content left round-corners">
 							<h3>2GIS</h3>
-							<span class="duration">( 2012 - 2018 )</span>
+							<span class="duration">( 2012 - 2019 )</span>
 							<span class="job-title"> <?= $lang == 'ru' ? 'Web-разработчик' : 'Web-programmer' ?></span>
 							<p><?= $lang == 'ru' ?
                                 'Разработка внутренних и внешних сервисов (корпоративный портал, интернет-портал, сервис перевода и другое); Интеграция с другими сервисами компании; Разработка масштабируемой и отказоустойчивой архитектуры' :
@@ -590,6 +590,7 @@
 						</div>  <!-- End Modal -->
 					</div>
 
+                    <?php if (false):?>
 					<!-- Project No. 4 -->
 					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="4">
 						<div class="img-wrapper overlay-slide-right center">
@@ -622,11 +623,47 @@
 								</div>
 							</div>
 						</div>  <!-- End Modal -->
-					</div>
-				</div>
-			</div>	
-		</div>
-		<!-- End Portfolio Section -->
+                    </div>
+                    <?php endif;?>
+
+                    <!-- Project No. 5 -->
+                    <div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="4">
+                        <div class="img-wrapper overlay-slide-right center">
+                            <!-- Project Image -->
+                            <img src="/img/p5.png" class="center-block img-responsive" alt="<?= $p5 ?>">
+                            <div class="overlay-content">
+                                <span><?= $p5 ?></span>
+                                <i class="fa fa-search" data-toggle="modal" data-target="#modal-5"></i>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="label_5">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header center">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h3 class="modal-title" id="label_5"><a href="http://<?= $p5 ?>" target="_blank"><?= $p5 ?></a></h3>
+                                        <div class="heading-line"></div>
+                                        <p class="cat"><?= $lang == 'ru' ? 'Интернет-магазин красивой упаковки' : 'Online store of beautiful pack' ?></p>
+                                    </div>
+                                    <!-- Modal Body -->
+                                    <div class="modal-body">
+                                        <!-- Project Image In Modal -->
+                                        <img class="center-block img-responsive" src="/img/p5.png" alt="<?= $p5 ?>">
+                                        <p><?= $lang == 'ru' ?
+                                                'Интернет-магазин с авторизацией, избранным, фильтрацией по каталогу и полнотекстовым поиском по товарам.' :
+                                                'Online store with authorize, wishlist, catalog filters & full text searching. ' ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  <!-- End Modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Portfolio Section -->
 
 		<!-- Start Contact Section -->
 		<div class="contact center" id="contact-me">
@@ -667,18 +704,27 @@
 				</div>
 				<!-- Contact Details -->
 				<div class="row contact-info">
+                    <?php if(false):?>
 					<div class="col-md-3 col-sm-6 col-xs-12 info">
 						<i class="fa fa-phone center"></i>
 						<div class="info-content">
 							<h3><?= $lang == 'ru' ? 'Позвонить' : 'call me' ?></h3>
-							<span><?= $phone ?></span>
+							<span><a href="tel:<?= $phone ?>"><?= $phone ?></a></span>
 						</div>
 					</div>
+                    <?php endif;?>
+                    <div class="col-md-3 col-sm-6 col-xs-12 info">
+                        <i class="fa fa-skype center"></i>
+                        <div class="info-content">
+                            <h3><?= $lang == 'ru' ? 'Позвонить' : 'call me' ?></h3>
+                            <span><a href="skype:<?= $skype ?>"><?= $skype ?></a></span>
+                        </div>
+                    </div>
 					<div class="col-md-3 col-sm-6 col-xs-12 info">
 						<i class="fa fa-envelope center"></i>
 						<div class="info-content">
 							<h3><?= $lang == 'ru' ? 'Написать' : 'Send a message' ?></h3>
-							<span><?= $email ?></span>
+							<span><a href="mailto:<?= $email ?>"><?= $email ?></a></span>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6 col-xs-12 info">
@@ -709,7 +755,7 @@
 					<div class="partner"><img src="/img/es.png" alt="<?= $p1 ?>"></div>
 					<div class="partner"><img src="/img/eg.png" alt="Novotelecom"></div>
 					<div class="partner"><img src="/img/sw.png" alt="<?= $p3 ?>"></div>
-					<div class="partner"><img src="/img/rs.png" alt="<?= $p4 ?>"></div>
+					<div class="partner"><img src="/img/pu.png" alt="<?= $p5 ?>"></div>
 					<div class="partner"><img src="/img/2g.png" alt="2Gis"></div>
 					<div class="partner"><img src="/img/pp.png" alt="<?= $p2 ?>"></div>
 <!--                    <div class="partner"><img src="/img/rm.png" alt="partner"></div>-->
