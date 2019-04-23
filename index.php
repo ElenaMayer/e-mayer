@@ -108,10 +108,10 @@
 					<div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
 						<h2 class="h2"><?= $lang == 'ru' ? $name_ru : $name_en ?></h2>
 						<div class="heading-line"></div>
-						<p class="introduce"><?= $lang == 'ru' ? 'Талантливый Full-Stack Разработчик' : 'Talented Full-Stack Web Developer' ?></p>
+						<p class="introduce"><?= $lang == 'ru' ? 'Full-Stack Разработчик' : 'Full-Stack Web Developer' ?></p>
 						<p class="intro"><?= $lang == 'ru' ?
-                                'Программирование - это моя профессия и хобби.' :
-                                'Programming is my profession and hobby.'
+                                'Программирование - моя профессия, работа и хобби.' :
+                                'Programming is my profession, work and hobby.'
                             ?>
                         </p>
                     </div>
@@ -123,7 +123,7 @@
 						<div class="personal-wrapper">
 							<span><strong><?= $lang == 'ru' ? 'имя:' : 'name:' ?> </strong><?= $lang == 'ru' ? $name_ru : $name_en ?></span>
 							<span><strong>E-mail: </strong><a href="mailto:<?= $email ?>"><?= $email ?></a></span>
-                            <?php if(false):?><span><strong><?= $lang == 'ru' ? 'номер телефона:' : 'phone number:' ?> </strong><a href="tel:<?= $phone ?>"><?= $phone ?></a></span><?php endif;?>
+                            <span><strong><?= $lang == 'ru' ? 'номер телефона:' : 'phone number:' ?> </strong><a href="tel:<?= $phone ?>"><?= $phone ?></a></span>
 						</div>
 					</div>
 					<div class="why-me col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200">
@@ -144,13 +144,13 @@
                             <div class="acc-item">
                                 <div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Что я могу Вам предложить?' : 'What I\'m really good at?' ?></div>
                                 <div class="acc-content"><?= $lang == 'ru' ?
-                                    'Создание интернет-магазина, сайта или сервиса с нуля; Улучшение и доработка существующего сайта/сервиса; Помощь в реализации сложных проектов.' :
+                                    'Создать красивый, удобный и узнаваемый интернет-магазин, сайт или сервис с нуля; Улучшить и доработать существующий сайт/сервис; Помочь в реализации сложного проекта.' :
                                     'Creating an online store, website or service from scratch; Improvement of the existing website/service; Assistance in the implementation of complex projects.' ?></div>
                             </div>
 							<div class="acc-item">
 								<div class="acc-title"><i class="fa fa-plus"></i> <?= $lang == 'ru' ? 'Мои хобби' : 'What is my hobbies' ?></div>
 								<div class="acc-content"><?= $lang == 'ru' ?
-                                    'Создание красивых и удобных сервисов, фотография, путешествия, саморазвитие и самосовершенствование.' :
+                                    'Разработка интересных сложных проектов, фотография, путешествия, саморазвитие и самосовершенствование.' :
                                     'Creation of beautiful and convenient services, photography, travel, self-development and self-improvement.' ?></div>
 							</div>
 						</div> <!-- End Accordion -->
@@ -488,6 +488,76 @@
 					<button class="filter round-corners" data-filter=".website" data-content="<?= $lang == 'ru' ? 'САЙТ' : 'WEBSITE' ?>"><?= $lang == 'ru' ? 'Сайт' : 'Website' ?></button>
 				</div>	
 				<div id="Container">
+                    <!-- Project No. 5 -->
+                    <div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="4">
+                        <div class="img-wrapper overlay-slide-right center">
+                            <!-- Project Image -->
+                            <img src="/img/p5.png" class="center-block img-responsive" alt="<?= $p5 ?>">
+                            <div class="overlay-content">
+                                <span><?= $p5 ?></span>
+                                <i class="fa fa-search" data-toggle="modal" data-target="#modal-5"></i>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="label_5">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header center">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h3 class="modal-title" id="label_5"><a href="http://<?= $p5 ?>" target="_blank"><?= $p5 ?></a></h3>
+                                        <div class="heading-line"></div>
+                                        <p class="cat"><?= $lang == 'ru' ? 'Интернет-магазин красивой упаковки' : 'Online store of beautiful pack' ?></p>
+                                    </div>
+                                    <!-- Modal Body -->
+                                    <div class="modal-body">
+                                        <!-- Project Image In Modal -->
+                                        <img class="center-block img-responsive" src="/img/p5.png" alt="<?= $p5 ?>">
+                                        <p><?= $lang == 'ru' ?
+                                                'Интернет-магазин с авторизацией, избранным, фильтрацией по каталогу и полнотекстовым поиском по товарам.' :
+                                                'Online store with authorize, wishlist, catalog filters & full text searching. ' ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  <!-- End Modal -->
+                    </div>
+
+                    <!-- Project No. 6 -->
+                    <div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="4">
+                        <div class="img-wrapper overlay-slide-right center">
+                            <!-- Project Image -->
+                            <img src="/img/p6.png" class="center-block img-responsive" alt="<?= $p6 ?>">
+                            <div class="overlay-content">
+                                <span><?= $p6 ?></span>
+                                <i class="fa fa-search" data-toggle="modal" data-target="#modal-6"></i>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="label_6">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header center">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h3 class="modal-title" id="label_6"><a href="http://<?= $p6 ?>" target="_blank"><?= $p6 ?></a></h3>
+                                        <div class="heading-line"></div>
+                                        <p class="cat"><?= $lang == 'ru' ? 'Интернет-магазин нижнего белья' : 'Online store of beautiful pack' ?></p>
+                                    </div>
+                                    <!-- Modal Body -->
+                                    <div class="modal-body">
+                                        <!-- Project Image In Modal -->
+                                        <img class="center-block img-responsive" src="/img/p6.png" alt="<?= $p6 ?>">
+                                        <p><?= $lang == 'ru' ?
+                                                'Интернет-магазин нижнего белья, одежды и акссесуаров с оплатой онлайн.' :
+                                                'Online store of underwear, clothes and accessories with online payment.' ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  <!-- End Modal -->
+                    </div>
+
 					<!-- Project No. 1 -->
 					<div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="1">
 						<div class="img-wrapper overlay-slide-right center">
@@ -590,7 +660,6 @@
 						</div>  <!-- End Modal -->
 					</div>
 
-                    <?php if (false):?>
 					<!-- Project No. 4 -->
 					<div class="mix website col-md-3 col-sm-6 col-xs-6" data-my-order="4">
 						<div class="img-wrapper overlay-slide-right center">
@@ -623,42 +692,6 @@
 								</div>
 							</div>
 						</div>  <!-- End Modal -->
-                    </div>
-                    <?php endif;?>
-
-                    <!-- Project No. 5 -->
-                    <div class="mix store col-md-3 col-sm-6 col-xs-6" data-my-order="4">
-                        <div class="img-wrapper overlay-slide-right center">
-                            <!-- Project Image -->
-                            <img src="/img/p5.png" class="center-block img-responsive" alt="<?= $p5 ?>">
-                            <div class="overlay-content">
-                                <span><?= $p5 ?></span>
-                                <i class="fa fa-search" data-toggle="modal" data-target="#modal-5"></i>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="label_5">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <!-- Modal Header -->
-                                    <div class="modal-header center">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h3 class="modal-title" id="label_5"><a href="http://<?= $p5 ?>" target="_blank"><?= $p5 ?></a></h3>
-                                        <div class="heading-line"></div>
-                                        <p class="cat"><?= $lang == 'ru' ? 'Интернет-магазин красивой упаковки' : 'Online store of beautiful pack' ?></p>
-                                    </div>
-                                    <!-- Modal Body -->
-                                    <div class="modal-body">
-                                        <!-- Project Image In Modal -->
-                                        <img class="center-block img-responsive" src="/img/p5.png" alt="<?= $p5 ?>">
-                                        <p><?= $lang == 'ru' ?
-                                                'Интернет-магазин с авторизацией, избранным, фильтрацией по каталогу и полнотекстовым поиском по товарам.' :
-                                                'Online store with authorize, wishlist, catalog filters & full text searching. ' ?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  <!-- End Modal -->
                     </div>
                 </div>
             </div>
@@ -704,7 +737,6 @@
 				</div>
 				<!-- Contact Details -->
 				<div class="row contact-info">
-                    <?php if(false):?>
 					<div class="col-md-3 col-sm-6 col-xs-12 info">
 						<i class="fa fa-phone center"></i>
 						<div class="info-content">
@@ -712,14 +744,6 @@
 							<span><a href="tel:<?= $phone ?>"><?= $phone ?></a></span>
 						</div>
 					</div>
-                    <?php endif;?>
-                    <div class="col-md-3 col-sm-6 col-xs-12 info">
-                        <i class="fa fa-skype center"></i>
-                        <div class="info-content">
-                            <h3><?= $lang == 'ru' ? 'Позвонить' : 'call me' ?></h3>
-                            <span><a href="skype:<?= $skype ?>"><?= $skype ?></a></span>
-                        </div>
-                    </div>
 					<div class="col-md-3 col-sm-6 col-xs-12 info">
 						<i class="fa fa-envelope center"></i>
 						<div class="info-content">
@@ -790,7 +814,7 @@
 						</div>
 					</div>
 					<div class="col-md12 col-xs-12 copyright">
-						<h6>&copy; <?= $domain ?> 2018 <?= $lang == 'ru' ? 'Все права защищены.' : 'All RightsReserved.' ?></h6>
+						<h6>&copy; <?= $domain ?> 2019 <?= $lang == 'ru' ? 'Все права защищены.' : 'All RightsReserved.' ?></h6>
 					</div>
 				</div>	
 			</div>
